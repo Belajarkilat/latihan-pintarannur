@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Latihan Pintar An Nur | Cadangan untuk Pusat Tuisyen Pintar An Nur</title>
+<meta name="description" content="Cadangan NaikGred untuk Pusat Tuisyen Pintar An Nur: aplikasi latihan dan laporan mingguan ibu bapa berjenama Pintar An Nur.">
+<meta property="og:title" content="Latihan Pintar An Nur: aplikasi dan laporan ibu bapa berjenama Pusat Tuisyen Pintar An Nur">
+<meta property="og:description" content="Contoh yang boleh dicuba sekarang. Disediakan khas untuk Pusat Tuisyen Pintar An Nur oleh NaikGred.">
+<meta property="og:image" content="https://belajarkilat.github.io/latihan-pintarannur/og.png">
+<meta property="og:url" content="https://belajarkilat.github.io/latihan-pintarannur/">
+<meta property="og:type" content="website">
+<link rel="icon" href="ikon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --laut:#12372F; --laut2:#1A4A40; --emas:#E9B949; --magenta:#0E7C5A; --magenta2:#095A41;
+  --kertas:#F4F6FB; --dakwat:#0E1530; --kelabu:#5B6680; --garis:#DDE2EE; --putih:#fff;
+  --wa:#E7FFDB; --wabg:#EFE7DE;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{font-family:"Figtree",system-ui,sans-serif;background:var(--kertas);color:var(--dakwat);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--emas);outline-offset:3px;border-radius:6px}
+.isi{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Baloo 2",sans-serif;line-height:1.08;font-weight:800;letter-spacing:-.01em}
+h2{font-size:clamp(30px,4.4vw,46px);max-width:18ch}
+.lead{font-size:clamp(17px,1.6vw,19px);color:var(--kelabu);max-width:56ch;margin-top:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:16px;font-weight:700;font-size:17px;text-decoration:none;border:0;cursor:pointer;font-family:inherit}
+.btn.utama{background:var(--magenta);color:#fff;box-shadow:0 5px 0 var(--magenta2)}
+.btn.utama:active{transform:translateY(3px);box-shadow:0 2px 0 var(--magenta2)}
+.btn.garis{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}
+
+/* jalur contoh */
+.jalur{background:var(--emas);color:var(--laut);font-size:14px;font-weight:600;text-align:center;padding:7px 16px}
+
+/* HERO */
+.hero{background:var(--laut);color:#fff;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-180px;top:-120px;width:620px;height:620px;border-radius:50%;
+  background:radial-gradient(circle,rgba(233,185,73,.22),rgba(233,185,73,0) 65%);pointer-events:none}
+.atas{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 0}
+.plat{display:inline-block;background:#fff;border-radius:14px;padding:7px 12px}
+.atas img{height:40px;width:auto;display:block}
+.atas .ng{font-size:14px;color:rgba(255,255,255,.76);text-align:right}
+.atas .ng b{color:#fff}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:36px 0 80px;position:relative;z-index:1}
+.hero h1{font-size:clamp(40px,6vw,70px)}
+.hero .lead{color:rgba(255,255,255,.84)}
+.hero .tindak{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.hero .kecil{margin-top:22px;font-size:14px;color:rgba(255,255,255,.70)}
+
+/* telefon WhatsApp */
+.fon{width:min(330px,100%);margin:0 auto;border-radius:44px;background:#05070F;padding:12px;box-shadow:0 40px 80px rgba(0,0,0,.45),0 0 0 2px rgba(255,255,255,.14)}
+.skrin{border-radius:34px;overflow:hidden;background:var(--wabg);height:600px;display:flex;flex-direction:column}
+.wa-atas{background:#F7F8FA;color:#111;display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid #E3E3E3}
+.wa-atas .av{width:36px;height:36px;border-radius:50%;background:#fff;border:1px solid #E3E3E3;overflow:hidden;display:grid;place-items:center;flex:none}
+.wa-atas .av img{width:28px}
+.wa-atas b{font-size:15px;display:block;line-height:1.2}
+.wa-atas span{font-size:12px;color:#667}
+.wa-badan{flex:1;padding:14px 10px;display:flex;flex-direction:column;justify-content:flex-end;gap:8px;overflow:hidden;
+  background-image:radial-gradient(rgba(0,0,0,.035) 1px,transparent 1px);background-size:14px 14px}
+.hari{align-self:center;background:#fff;color:#556;font-size:12px;border-radius:8px;padding:3px 10px;box-shadow:0 1px 1px rgba(0,0,0,.06)}
+.bub{max-width:88%;background:#fff;color:#111;border-radius:12px;padding:8px 10px 6px;font-size:14px;line-height:1.4;box-shadow:0 1px 1px rgba(0,0,0,.08);position:relative}
+.bub.saya{align-self:flex-end;background:var(--wa)}
+.bub time{display:block;text-align:right;font-size:11px;color:#889;margin-top:2px}
+.bub.kad{padding:4px}
+.kad-lap{display:block;text-decoration:none;color:inherit;border-radius:9px;overflow:hidden;background:var(--laut)}
+.kad-lap .kp{padding:12px 12px 10px;color:#fff}
+.kad-lap .kp img{height:24px;width:auto;display:block;background:#fff;border-radius:6px;padding:3px 6px}
+.kad-lap .kp b{display:block;font-family:"Baloo 2",sans-serif;font-size:19px;line-height:1.15;margin-top:8px}
+.kad-lap .kp .sk{display:flex;align-items:baseline;gap:8px;margin-top:6px}
+.kad-lap .kp .sk strong{font-family:"Baloo 2",sans-serif;font-size:40px;line-height:.9;color:var(--emas)}
+.kad-lap .kp .sk span{font-size:13px;color:rgba(255,255,255,.84)}
+.kad-lap .kb{background:#fff;color:#111;padding:8px 10px;font-size:13px}
+.kad-lap .kb u{color:#0B7DDA;text-decoration:none;font-weight:600}
+.menaip{align-self:flex-start;background:#fff;border-radius:12px;padding:10px 12px;display:flex;gap:4px}
+.menaip i{width:7px;height:7px;border-radius:50%;background:#99A;animation:titik 1s infinite}
+.menaip i:nth-child(2){animation-delay:.15s}.menaip i:nth-child(3){animation-delay:.3s}
+@keyframes titik{0%,60%,100%{opacity:.3;transform:none}30%{opacity:1;transform:translateY(-3px)}}
+/* satu jujukan masuk sahaja */
+.j1,.j2,.j3,.j4{opacity:0;transform:translateY(10px);animation:masuk .45s ease forwards}
+.j1{animation-delay:.5s}.menaip.jt{opacity:0;animation:muncul 1.4s ease 1.1s forwards}
+.j2{animation-delay:2.5s}.j3{animation-delay:3.4s}.j4{animation-delay:4.6s}
+@keyframes masuk{to{opacity:1;transform:none}}
+.fon:not(.jalan) .j1,.fon:not(.jalan) .j2,.fon:not(.jalan) .j3,.fon:not(.jalan) .j4,.fon:not(.jalan) .menaip.jt{animation-play-state:paused}
+@keyframes muncul{0%{opacity:0}15%{opacity:1}85%{opacity:1}100%{opacity:0;height:0;padding:0;margin:-4px 0}}
+
+/* SEKSYEN */
+section.blok{padding:88px 0}
+.masalah{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.masalah ol{list-style:none;display:grid;gap:22px;margin-top:6px}
+.masalah li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.masalah li span{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:22px;color:var(--magenta);border:2px solid var(--magenta);border-radius:50%;width:44px;height:44px;display:grid;place-items:center}
+.masalah li b{display:block;font-size:18px}
+.masalah li p{color:var(--kelabu)}
+
+/* cuba sendiri */
+.cuba{background:#fff;border-top:1px solid var(--garis);border-bottom:1px solid var(--garis)}
+.cuba-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;margin-top:8px}
+.tab{display:grid;gap:12px;margin-top:28px}
+.tab button{all:unset;cursor:pointer;display:block;border-radius:18px;padding:18px 20px;border:2px solid var(--garis);background:var(--kertas)}
+.tab button b{font-family:"Baloo 2",sans-serif;font-size:21px;display:block;line-height:1.2}
+.tab button span{color:var(--kelabu);font-size:15px}
+.tab button[aria-selected="true"]{border-color:var(--laut);background:var(--laut);color:#fff}
+.tab button[aria-selected="true"] span{color:rgba(255,255,255,.84)}
+.tab button:focus-visible{outline:3px solid var(--emas);outline-offset:3px}
+.fon.app .skrin{background:#fff;height:680px}
+.fon.app iframe{width:100%;height:100%;border:0;display:block}
+.buka-penuh{display:block;text-align:center;margin-top:14px;font-weight:600;color:var(--laut)}
+
+/* kandungan */
+.subjek{display:grid;grid-template-columns:repeat(4,1fr);margin-top:36px;border-top:3px solid var(--laut)}
+.subjek div{padding:20px 18px 6px 0}
+.subjek b{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:54px;line-height:1;color:var(--laut);display:block}
+.subjek strong{display:block;font-size:18px;margin-top:4px}
+.subjek span{color:var(--kelabu);font-size:15px}
+.nota{color:var(--kelabu);font-size:15px;margin-top:22px;max-width:70ch}
+
+/* kalkulator */
+.kira{background:var(--laut);color:#fff}
+.kira .lead{color:rgba(255,255,255,.84)}
+.kira-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:40px;align-items:start}
+.medan{margin-bottom:28px}
+.medan label{display:flex;justify-content:space-between;gap:12px;font-weight:600;font-size:17px}
+.medan label output{font-family:"Baloo 2",sans-serif;font-size:24px;color:var(--emas);line-height:1}
+.medan small{display:block;color:rgba(255,255,255,.70);font-size:14px;margin-top:2px}
+input[type=range]{width:100%;margin-top:12px;accent-color:var(--emas);height:28px}
+.hasil{background:#fff;color:var(--dakwat);border-radius:28px;padding:30px}
+.hasil .baris{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--garis);font-size:16px}
+.hasil .baris b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.hasil .baris.tolak b{color:var(--magenta)}
+.hasil .jumlah{margin-top:18px}
+.hasil .jumlah span{color:var(--kelabu);font-size:15px}
+.hasil .jumlah strong{display:block;font-family:"Baloo 2",sans-serif;font-weight:800;font-size:clamp(46px,6vw,64px);line-height:1;color:var(--laut);font-variant-numeric:tabular-nums}
+.hasil .jumlah em{font-style:normal;display:block;color:#0B6E4C;font-weight:700;margin-top:6px}
+.hasil p{font-size:13px;color:var(--kelabu);margin-top:16px}
+
+/* tawaran */
+.tawaran-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:40px}
+.langkah{list-style:none;display:grid;gap:0;counter-reset:l}
+.langkah li{position:relative;padding:0 0 28px 58px;counter-increment:l}
+.langkah li::before{content:counter(l);position:absolute;left:0;top:-2px;width:40px;height:40px;border-radius:12px;background:var(--laut);color:var(--emas);font-family:"Baloo 2",sans-serif;font-weight:800;font-size:20px;display:grid;place-items:center}
+.langkah li::after{content:"";position:absolute;left:19px;top:44px;bottom:6px;width:2px;background:var(--garis)}
+.langkah li:last-child::after{display:none}
+.langkah b{display:block;font-size:18px}
+.langkah p{color:var(--kelabu)}
+.harga{border:3px solid var(--laut);border-radius:28px;padding:30px;background:#fff;position:relative}
+.harga .pita{position:absolute;top:-15px;left:26px;background:var(--emas);color:var(--laut);font-weight:700;font-size:14px;border-radius:999px;padding:4px 14px}
+.harga h3{font-size:26px;margin-top:6px}
+.harga .rm{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;margin-top:18px}
+.tawaran-grid>*,.kira-grid>*,.cuba-grid>*,.masalah>*{min-width:0}
+.harga .rm strong{font-family:"Baloo 2",sans-serif;font-size:56px;line-height:1;color:var(--laut)}
+.harga .rm span{color:var(--kelabu)}
+.harga .tambah{margin-top:4px;font-size:17px}
+.harga .tambah b{color:var(--magenta)}
+.harga ul{list-style:none;margin-top:22px;display:grid;gap:10px}
+.harga li{padding-left:30px;position:relative}
+.harga li::before{content:"";position:absolute;left:0;top:4px;width:18px;height:18px;border-radius:50%;background:#E3F6EE;box-shadow:inset 0 0 0 5px #0E8A5F}
+.harga .btn{width:100%;margin-top:26px}
+
+/* jaminan */
+.jaminan{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:64px;padding-top:36px;border-top:1px solid var(--garis)}
+.jaminan b{display:block;font-size:18px}
+.jaminan p{color:var(--kelabu);margin-top:4px}
+
+/* penutup */
+.tutup{background:var(--laut);color:#fff;text-align:left}
+.tutup h2{max-width:20ch}
+.tutup .lead{color:rgba(255,255,255,.84)}
+.tutup .btn{margin-top:30px}
+.kaki{padding:28px 0;color:rgba(255,255,255,.70);font-size:14px;border-top:1px solid rgba(255,255,255,.16);margin-top:72px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.kaki b{color:#4FD1A5}.kaki b i{font-style:normal;color:var(--emas)}
+
+@media (max-width:900px){
+  .hero-grid,.masalah,.cuba-grid,.kira-grid,.tawaran-grid{grid-template-columns:1fr}
+  .hero-grid{padding-bottom:56px}
+  .subjek{grid-template-columns:repeat(2,1fr)}
+  .jaminan{grid-template-columns:1fr;gap:20px}
+  section.blok{padding:64px 0}
+  .cuba-grid .fon{order:2}
+}
+@media (max-width:520px){
+  .isi{padding:0 16px}
+  .atas img{height:32px;width:auto}
+  .atas .ng{font-size:12px}
+  .skrin{height:540px}
+  .fon.app .skrin{height:620px}
+  .hero .tindak .btn{width:100%}
+  .subjek b{font-size:44px}
+  .harga{padding:26px 20px}
+  .harga .rm strong{font-size:48px}
+}
+</style>
+</head>
+<body>
+<div class="jalur">Contoh cadangan, disediakan khas untuk Pusat Tuisyen Pintar An Nur. Belum dilancarkan kepada umum.</div>
+
+<header class="hero">
+  <div class="isi">
+    <div class="atas">
+      <span class="plat"><img src="logo.png" alt="Pusat Tuisyen Pintar An Nur" width="491" height="120"></span>
+      <div class="ng">Disediakan oleh <b>NaikGred</b><br>27 Oktober 2026</div>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <h1>Setiap Jumaat, ibu bapa Pintar An Nur nampak kemajuan anak mereka.</h1>
+        <p class="lead">Latihan Pintar An Nur ialah aplikasi latihan dan laporan mingguan dengan logo Pusat Tuisyen Pintar An Nur. Murid berlatih di rumah, tutor nampak siapa yang lemah sebelum kelas, dan ibu bapa terima laporan di WhatsApp. Semuanya siap: Sains, Matematik, Sejarah dan English, Tingkatan 1 hingga 5.</p>
+        <div class="tindak">
+          <a class="btn utama" href="#cuba">Cuba aplikasi sekarang</a>
+          <a class="btn garis" href="laporan.html">Lihat laporan ibu bapa</a>
+        </div>
+        <p class="kecil">Aplikasi ini sudah berjalan. Cuba sekarang tanpa memasang apa-apa.</p>
+      </div>
+
+      <div class="fon" aria-label="Contoh laporan mingguan sampai ke WhatsApp ibu bapa">
+        <div class="skrin">
+          <div class="wa-atas">
+            <div class="av"><img src="ikon.png" alt=""></div>
+            <div><b>Pintar An Nur Kemaman</b><span>Akaun perniagaan</span></div>
+          </div>
+          <div class="wa-badan">
+            <div class="hari">Jumaat</div>
+            <div class="bub j1">Assalamualaikum Puan Rahmah. Ini laporan Sains Aisyah untuk minggu ini.<time>8:00 PM</time></div>
+            <div class="menaip jt" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="bub kad j2">
+              <a class="kad-lap" href="laporan.html">
+                <div class="kp">
+                  <img src="logo.png" alt="">
+                  <b>Aisyah binti Rahman, Tingkatan 3</b>
+                  <div class="sk"><strong>78%</strong><span>naik 14 markah daripada minggu lepas</span></div>
+                </div>
+                <div class="kb">4 sesi latihan, 46 minit. Perlu dibantu: Pengangkutan.<br><u>Buka laporan penuh</u></div>
+              </a>
+              <time>8:00 PM</time>
+            </div>
+            <div class="bub saya j3">Alhamdulillah, naik banyak minggu ni 😊 Terima kasih cikgu!<time>8:04 PM</time></div>
+            <div class="bub saya j4">Nanti saya suruh dia buat latihan Pengangkutan malam ni.<time>8:05 PM</time></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="blok">
+    <div class="isi masalah">
+      <div>
+        <h2>Ibu bapa membayar setiap bulan, tetapi jarang nampak hasilnya.</h2>
+        <p class="lead">Antara peperiksaan, ibu bapa hanya dapat tahu "anak okey". Bila mereka tidak nampak kemajuan, yuran bulanan mula dipersoalkan. Latihan Pintar An Nur menutup jurang itu.</p>
+      </div>
+      <ol>
+        <li><span>1</span><div><b>Murid berlatih di rumah</b><p>Soalan ikut bab DSKP dalam bentuk perjalanan enam hentian. Murid bermain di telefon, 5 hingga 15 minit sehari.</p></div></li>
+        <li><span>2</span><div><b>Tutor nampak siapa lemah, sebelum kelas</b><p>Markah setiap murid, bab yang lemah dan diagnostik kelas. Tutor masuk kelas dengan tahu apa yang perlu diulang.</p></div></li>
+        <li><span>3</span><div><b>Ibu bapa terima laporan setiap minggu</b><p>Markah, masa berlatih, bab yang perlu dibantu dan nota tutor, dengan logo Pintar An Nur, terus ke WhatsApp.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="blok cuba" id="cuba">
+    <div class="isi">
+      <h2>Cuba sendiri, seperti murid, tutor dan ibu bapa Pintar An Nur.</h2>
+      <div class="cuba-grid">
+        <div>
+          <div class="tab" role="tablist" aria-label="Paparan">
+            <button role="tab" aria-selected="true" data-src="app/?demo=murid" data-penuh="app/?demo=murid"><b>Murid</b><span>Pilih tingkatan dan bab, kemudian lepasi hentian satu demi satu.</span></button>
+            <button role="tab" aria-selected="false" data-src="app/?demo=cikgu" data-penuh="app/?demo=cikgu"><b>Tutor</b><span>Kelas contoh 6 murid: markah, diagnostik dan papan skor.</span></button>
+            <button role="tab" aria-selected="false" data-src="laporan.html" data-penuh="laporan.html"><b>Ibu bapa</b><span>Laporan mingguan berjenama Pintar An Nur yang dihantar melalui WhatsApp.</span></button>
+          </div>
+        </div>
+        <div>
+          <div class="fon app"><div class="skrin"><iframe id="bingkai" title="Contoh Latihan Pintar An Nur" src="app/?demo=murid" loading="lazy"></iframe></div></div>
+          <a class="buka-penuh" id="penuh" href="app/?demo=murid" target="_blank" rel="noopener">Buka dalam tab baharu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blok">
+    <div class="isi">
+      <h2>Kandungan sudah siap. Tutor tidak perlu menulis soalan.</h2>
+      <p class="lead">Semua bab ikut DSKP KSSM, Tingkatan 1 hingga 5. Latihan Pintar An Nur dibina atas Jejak TP, yang sudah digunakan oleh guru sekolah menengah sejak September 2026: lebih 1,100 murid sudah berlatih dengannya.</p>
+      <div class="subjek">
+        <div><b>51</b><strong>Sains</strong><span>bab, T1 hingga T5</span></div>
+        <div><b>53</b><strong>Matematik</strong><span>bab, T1 hingga T5</span></div>
+        <div><b>49</b><strong>Sejarah</strong><span>bab, T1 hingga T5</span></div>
+        <div><b>31</b><strong>English</strong><span>bab, T1 hingga T5</span></div>
+      </div>
+      <p class="nota">Contoh di atas menunjukkan Sains. Subjek lain menggunakan aplikasi yang sama dan boleh dijenamakan Pintar An Nur dengan cara yang sama.</p>
+    </div>
+  </section>
+
+  <section class="blok kira">
+    <div class="isi">
+      <h2>Kira sendiri apa yang Pintar An Nur dapat.</h2>
+      <p class="lead">Laraskan angka mengikut cawangan Pintar An Nur. Kiraan berlaku dalam pelayar ini sahaja.</p>
+      <div class="kira-grid">
+        <div>
+          <div class="medan">
+            <label for="murid">Murid yang menggunakan aplikasi <output id="oMurid">150</output></label>
+            <small>Untuk kedua-dua cawangan, Taman Bandar Putra dan Mak Chili.</small>
+            <input type="range" id="murid" min="20" max="800" step="10" value="150">
+          </div>
+          <div class="medan">
+            <label for="caj">Caj laporan kepada ibu bapa, sebulan <output id="oCaj">RM10</output></label>
+            <small>Boleh juga dimasukkan dalam yuran sedia ada (RM0).</small>
+            <input type="range" id="caj" min="0" max="20" step="1" value="10">
+          </div>
+          <div class="medan">
+            <label for="kekal">Murid yang tidak jadi berhenti <output id="oKekal">2%</output></label>
+            <small>Kerana ibu bapa nampak kemajuan setiap minggu.</small>
+            <input type="range" id="kekal" min="0" max="10" step="1" value="2">
+          </div>
+          <div class="medan">
+            <label for="yuran">Purata yuran seorang murid, sebulan <output id="oYuran">RM150</output></label>
+            <input type="range" id="yuran" min="60" max="400" step="10" value="150">
+          </div>
+        </div>
+        <div class="hasil" aria-live="polite">
+          <div class="baris"><span>Hasil caj laporan</span><b id="rCaj">RM6,000</b></div>
+          <div class="baris"><span>Yuran yang terselamat</span><b id="rKekal">RM1,800</b></div>
+          <div class="baris tolak"><span>Kos Latihan Pintar An Nur (RM2 seorang)</span><b id="rKos">−RM1,200</b></div>
+          <div class="jumlah">
+            <span>Tambahan bersih untuk Pintar An Nur, sebulan</span>
+            <strong id="rBersih">RM6,600</strong>
+            <em id="rTahun">RM79,200 setahun</em>
+          </div>
+          <p>Anggaran sahaja. Kadar murid yang kekal dan caj laporan ditentukan oleh Pintar An Nur sendiri. Kos pemasangan sekali tidak dimasukkan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blok">
+    <div class="isi">
+      <h2>Tawaran perintis untuk Pintar An Nur.</h2>
+      <p class="lead">Kami hanya mengambil tiga pusat tuisyen sebagai perintis tahun ini. Harga perintis dikunci selagi langganan tidak terputus.</p>
+      <div class="tawaran-grid">
+        <ol class="langkah">
+          <li><b>Demo 15 minit melalui Google Meet</b><p>Kami tunjukkan aplikasi kepada pengurusan dan tutor, dan jawab semua soalan. Tiada komitmen.</p></li>
+          <li><b>Sahkan perintis</b><p>Bayaran pertama RM500. Baki RM1,000 dibayar dalam dua bulan berikutnya.</p></li>
+          <li><b>Minggu pertama: kami pasang</b><p>Logo, warna dan alamat web Pintar An Nur sendiri, akaun tutor untuk setiap cawangan, dan format laporan mingguan ikut cara Pintar An Nur.</p></li>
+          <li><b>Tambah cawangan bila-bila masa</b><p>Cawangan baharu disambung tanpa kos pemasangan tambahan.</p></li>
+        </ol>
+        <div class="harga">
+          <span class="pita">Harga perintis, 3 pusat sahaja</span>
+          <h3>Latihan Pintar An Nur</h3>
+          <div class="rm"><strong>RM1,500</strong><span>pemasangan sekali</span></div>
+          <p class="tambah">ditambah <b>RM2 seorang murid sebulan</b>, minimum RM125 sebulan</p>
+          <ul>
+            <li>Pemasangan boleh dibayar RM500 sebulan selama 3 bulan</li>
+            <li>Sains, Matematik, Sejarah dan English, Tingkatan 1 hingga 5</li>
+            <li>Laporan mingguan ibu bapa dengan logo Pintar An Nur</li>
+            <li>Akaun untuk semua tutor Pintar An Nur, di kedua-dua cawangan</li>
+            <li>Kandungan dikemas kini ikut DSKP tanpa caj tambahan</li>
+          </ul>
+          <a class="btn utama" id="waHarga" href="#">Mohon perintis untuk Pintar An Nur</a>
+        </div>
+      </div>
+      <div class="jaminan">
+        <div><b>Harga perintis dikunci</b><p>RM2 seorang murid sebulan tidak akan naik selagi langganan Pintar An Nur tidak terputus.</p></div>
+        <div><b>Data murid milik Pintar An Nur</b><p>Markah boleh dieksport ke Excel bila-bila masa. Kami tidak menghubungi ibu bapa Pintar An Nur secara terus.</p></div>
+        <div><b>Jenama Pintar An Nur di hadapan</b><p>Murid dan ibu bapa melihat Pusat Tuisyen Pintar An Nur. NaikGred hanya disebut kecil di bahagian bawah.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blok tutup">
+    <div class="isi">
+      <h2>Mahu lihat Latihan Pintar An Nur bersama tutor anda?</h2>
+      <p class="lead">Kami boleh buat demo 15 minit melalui Google Meet bersama pengurusan dan tutor Pintar An Nur, pada masa yang sesuai.</p>
+      <a class="btn utama" id="waTutup" href="#">WhatsApp Hasfi, NaikGred</a>
+      <div class="kaki">
+        <span>Disediakan untuk Pusat Tuisyen Pintar An Nur. Logo Pintar An Nur digunakan untuk tujuan cadangan sahaja.</span>
+        <span>Dikuasakan oleh <b>Naik<i>Gred</i></b>, naikgred.com</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  var fon=document.querySelector(".hero .fon");
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(e){ if(e[0].isIntersecting){ fon.classList.add("jalan"); io.disconnect(); } },{threshold:.45});
+    io.observe(fon);
+  } else fon.classList.add("jalan");
+  var WA="60106640353";
+  var teks=encodeURIComponent("Assalamualaikum Hasfi, saya dari Pusat Tuisyen Pintar An Nur. Saya sudah lihat contoh Latihan Pintar An Nur dan berminat dengan tawaran perintis.");
+  ["waHarga","waTutup"].forEach(function(id){ document.getElementById(id).href="https://wa.me/"+WA+"?text="+teks; });
+
+  var tab=[].slice.call(document.querySelectorAll('[role=tab]')), f=document.getElementById("bingkai"), p=document.getElementById("penuh");
+  tab.forEach(function(b,i){
+    b.addEventListener("click",function(){
+      tab.forEach(function(x){x.setAttribute("aria-selected", x===b?"true":"false");});
+      f.src=b.dataset.src; p.href=b.dataset.penuh;
+    });
+    b.addEventListener("keydown",function(e){
+      var n = e.key==="ArrowDown"||e.key==="ArrowRight" ? 1 : e.key==="ArrowUp"||e.key==="ArrowLeft" ? -1 : 0;
+      if(n){ e.preventDefault(); var t=tab[(i+n+tab.length)%tab.length]; t.focus(); t.click(); }
+    });
+  });
+
+  function rm(n){ return "RM"+Math.round(n).toLocaleString("en-MY"); }
+  var m=document.getElementById("murid"), c=document.getElementById("caj"), k=document.getElementById("kekal"), y=document.getElementById("yuran");
+  function kira(){
+    var murid=+m.value, caj=+c.value, kekal=+k.value, yuran=+y.value;
+    document.getElementById("oMurid").textContent=murid.toLocaleString("en-MY");
+    document.getElementById("oCaj").textContent="RM"+caj;
+    document.getElementById("oKekal").textContent=kekal+"%";
+    document.getElementById("oYuran").textContent="RM"+yuran;
+    var hCaj=murid*caj, hKekal=murid*kekal/100*yuran, kos=Math.max(125,murid*2), bersih=hCaj+hKekal-kos;
+    document.getElementById("rCaj").textContent=rm(hCaj);
+    document.getElementById("rKekal").textContent=rm(hKekal);
+    document.getElementById("rKos").textContent="−"+rm(kos);
+    document.getElementById("rBersih").textContent=(bersih<0?"−":"")+rm(Math.abs(bersih));
+    document.getElementById("rTahun").textContent=(bersih<0?"−":"")+rm(Math.abs(bersih)*12)+" setahun";
+  }
+  [m,c,k,y].forEach(function(el){ el.addEventListener("input",kira); });
+  kira();
+})();
+</script>
+</body>
+</html>
